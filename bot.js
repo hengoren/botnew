@@ -65,8 +65,8 @@ var chunk;
 function respond() {
   // chunk = this.req.chunks[0]
   var request = JSON.parse(this.req.chunks[0]), //length is one
-      //botRegex = /^./;
-      botRegex = /^\/cool guy$/;
+      botRegex = /^./;
+      //botRegex = /^\/cool guy$/;
 
 
   // toSend = request.text.substring(5,request.text.length)
