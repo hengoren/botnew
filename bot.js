@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 var adjectives = ["abandoned", "able", "absolute", "adorable", "adventerous", "academic", "acceptable", "acclaimed", "accomplished", "accurate",
 "aching", "acidic", "acrobatic", "babyish", "bad", "bare", "basic", "biodegradable", "bogus", "bubbly", "bumpy", "bruised", 
-"calculating", "calm", "carefree", "charming" "cheap", "chubby", "circular", "clean", "colorful", "composed", "confused", "crusty", "creamy", 
+"calculating", "calm", "carefree", "charming", "cheap", "chubby", "circular", "clean", "colorful", "composed", "confused", "crusty", "creamy", 
 "damaged", "dangerous", "defenseless", "delicious", "delirious", "dense", "devoted", "distant", "dizzy", "droopy", "dull", 
 "eager", "easy", "edible", "elastic", "elderly", "enormous", "evil", "exotic", "fabulous", "fat", "faithful", "feisty", "filty", "flamboyant", "flaky", "flowery", "flimsy", "fluffy", "foolish", "frail",
 "frosty", "fussy", "friendly", "gargantuan", "gentle", "giddy", "glum", "gifted", "gross", "grouchy", "grubby", "hairy", "harmless", "healthy",
