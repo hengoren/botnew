@@ -48,8 +48,8 @@ var name;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]), //length is one
-      botRegex = /^./;
-      //botRegex = /^\/cool guy$/;
+      //botRegex = /^./;
+      botRegex = /^\/cool guy$/;
 
       
   r = JSON.stringify(request, null, 4);
