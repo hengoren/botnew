@@ -89,7 +89,6 @@ function respond() {
 
   r = JSON.stringify(request, null, 4);
   namelong = r.substring(r.indexOf('"name":') + 9, (r.indexOf('"sender_id":') - 4))
-  name = namelong.substring(0,namelong.length-3)
   userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
 
   if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
