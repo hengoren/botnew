@@ -108,7 +108,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" :  "cmon" + name + ", boi yo look like a muhfuckin" + adjectives[randomadj] + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
+    "text" :  "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
     //"text" :  r
   };
 
