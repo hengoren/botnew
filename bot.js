@@ -53,7 +53,8 @@ var bakes = ["look at yo 'velis false' jeans",
 "egg Nog 50% off after. Christmas buying azz.",
 "ole swole chest skinny leg havin azz",
 "ole sketchers shape-upz wearin ass",
-"'uh un don't throw dem cans away, I'm goin to turn dem in tomorrow' ole shoopin cart pushin ass"
+"'uh un don't throw dem cans away, I'm goin to turn dem in tomorrow' ole shoopin cart pushin ass", 
+"with your boot nose ass, loose tobacco smellin ass...wrestlin mat smellin ass"
 ]
 
 /* vars created to generate random integers within the bounds of each dictionary. This will index you to a random item in the dictionary */
