@@ -76,7 +76,7 @@ function respond() {
   name = namelong.substring(0,namelong.length-3)
   userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
 
-  if(request.text && botRegex.test(request.text) && userId != '346039"') {  //&& userId != '346039"' 2100646 //&& userId =='346039"'
+  if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
     toSend = request.text;
     this.res.writeHead(200);
     postMessage();
