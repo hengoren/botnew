@@ -54,7 +54,6 @@ function respond() {
       
   r = JSON.stringify(request, null, 4);
 
-  var jName = request.name;
   var groupID = request.group_id;
 
 
@@ -88,7 +87,7 @@ function postMessage() {
   body = {
     "bot_id" : botID,
     // "text" : name + ", you look like this guy \n \n" + botResponse + "\n \n wit yo " + bakes[randomnumber] + " lookin ass!!!"
-    "text" : jName.toString() + groupID.toString()
+    "text" : groupID.toString()
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
