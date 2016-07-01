@@ -82,7 +82,8 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : name + ", you look like this guy \n \n" + botResponse + "\n \n wit yo " + bakes[randomnumber] + " lookin ass!!!"
+    // "text" : name + ", you look like this guy \n \n" + botResponse + "\n \n wit yo " + bakes[randomnumber] + " lookin ass!!!"
+    "text" : r
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
