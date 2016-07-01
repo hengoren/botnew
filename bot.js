@@ -65,8 +65,8 @@ var chunk;
 function respond() {
   // chunk = this.req.chunks[0]
   var request = JSON.parse(this.req.chunks[0]), //length is one
-      botRegex = /^./;
-      // botRegex = /^roast/;
+      //botRegex = /^./;
+      botRegex = /^\/cool guy$/;
 
 
   // toSend = request.text.substring(5,request.text.length)
@@ -104,7 +104,8 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" :  name + ", boi you look like this thing \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randomnumber] + " head ass like shit boi"
+    //"text" :  name + ", boi you look like this thing \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randomnumber] + " head ass like shit boi"
+    "text" :  r
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
