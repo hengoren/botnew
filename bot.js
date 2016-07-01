@@ -21,7 +21,7 @@ var animals = ["aardvark", "albatross", "alligator", "alpaca", "anteater", "arma
 "babbon", "badger", "bald eagle", "bear", "beaver", "beluga whale", "bison", "bird", 
 "blowfish", "boa constrictor", "buffalo", "bullfrog", "butterfly", "camel", "caribou", 
 "chipmunk", "caterpillar", "cheetah", "chihuahua", "chimipanzee", "cockatoo", "cow", "crustacean", 
-"chinchilla", "deer", "dodo", "dog", "dinosaur", "dolphin", "duck", "earthworm", "eel", "elephant", "donkey" 
+"chinchilla", "deer", "dodo", "dog", "dinosaur", "dolphin", "duck", "earthworm", "eel", "elephant", "donkey", 
 "duck-billed platypus", "elk", "emu", "fox", "giraffe", "gorilla", "grasshopper", 
 "groundhog", "guinea pig", "goat", "jack rabbit", "kangaroo", "koala bear", "ladybug", "lemur", "lion", 
 "lizard", "manatee", "meerkat", "monkey", "orangutan", "moose", "opossum", "narhwal", 
