@@ -17,17 +17,17 @@ var adjectives = ["abandoned", "able", "absolute", "adorable", "adventerous", "a
 "spherical", "sleepy", "soupy", "starry", "stiff", "slimy", "scented", "scrawny", "shy", "smooth", "sniveling", "spicy", "sympathetic", 
 "ugly", "tall", "tasty", "tattoed", "tired", "triangular", "tubby", "uncomfortable", "unripe", "vibrant", "watery", "well groomed", "woozy", "wiry", "worried"]
 
-// var animals = ["aardvark", "albatross", "alligator", "alpaca", "anteater", "armadillo",
-// "babbon", "badger", "bald eagle", "bear", "beaver", "beluga whale", "bison", "bird", 
-// "blowfish", "boa constrictor", "buffalo", "bullfrog", "butterfly", "camel", "caribou", 
-// "chipmunk", "caterpillar", "cheetah", "chihuahua", "chimipanzee", "cockatoo", "cow", "crustacean",
-// "chinchilla", "deer", "dodo", "dog", "dinosaur", "dolphin", "duck", "earthworm", "eel", "elephant", "donkey"
-// "duck-billed platypus", "elk", "emu", "fox", "giraffe", "gorilla", "grasshopper", 
-// "groundhog", "guinea pig", "goat", "jack rabbit", "kangaroo", "koala bear", "ladybug", "lemur", "lion",
-// "lizard", "manatee", "meerkat", "monkey", "orangutan", "moose", "opossum", "narhwal", 
-// "ostrich", "penguin", "tortoise", "puma", "nigga", "raccon", "rabbit", "salmon", "shark", "skunk",
-// "sloth", "squirrel", "Stegasaurus", "toucan", "tarantula", "tiger", "turkey", "velociraptor",
-// "wallaby", "weasel", "whippersnapper", "wombat", "zebra"]
+var animals = ["aardvark", "albatross", "alligator", "alpaca", "anteater", "armadillo", 
+"babbon", "badger", "bald eagle", "bear", "beaver", "beluga whale", "bison", "bird", 
+"blowfish", "boa constrictor", "buffalo", "bullfrog", "butterfly", "camel", "caribou", 
+"chipmunk", "caterpillar", "cheetah", "chihuahua", "chimipanzee", "cockatoo", "cow", "crustacean", 
+"chinchilla", "deer", "dodo", "dog", "dinosaur", "dolphin", "duck", "earthworm", "eel", "elephant", "donkey" 
+"duck-billed platypus", "elk", "emu", "fox", "giraffe", "gorilla", "grasshopper", 
+"groundhog", "guinea pig", "goat", "jack rabbit", "kangaroo", "koala bear", "ladybug", "lemur", "lion", 
+"lizard", "manatee", "meerkat", "monkey", "orangutan", "moose", "opossum", "narhwal", 
+"ostrich", "penguin", "tortoise", "puma", "nigga", "raccon", "rabbit", "salmon", "shark", "skunk", 
+"sloth", "squirrel", "Stegasaurus", "toucan", "tarantula", "tiger", "turkey", "velociraptor", 
+"wallaby", "weasel", "whippersnapper", "wombat", "zebra"]
 
 
 var bakes = ["look at yo 'velis false' jeans",
