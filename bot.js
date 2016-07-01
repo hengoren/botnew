@@ -1,8 +1,10 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
+/* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
 var botID = process.env.BOT_ID;
 
+/* A dictionary of assorted adjectives. Used for generated responses */
 var adjectives = ["abandoned", "able", "absolute", "adorable", "adventerous", "academic", "acceptable", "acclaimed", "accomplished", "accurate", 
 "aching", "acidic", "acrobatic", "babyish", "bad", "bare", "basic", "biodegradable", "bogus", "bubbly", "bumpy", "bruised", 
 "calculating", "calm", "carefree", "charming", "cheap", "chubby", "circular", "clean", "colorful", "composed", "confused", "crusty", "creamy", 
@@ -17,6 +19,7 @@ var adjectives = ["abandoned", "able", "absolute", "adorable", "adventerous", "a
 "spherical", "sleepy", "soupy", "starry", "stiff", "slimy", "scented", "scrawny", "shy", "smooth", "sniveling", "spicy", "sympathetic", 
 "ugly", "tall", "tasty", "tattoed", "tired", "triangular", "tubby", "uncomfortable", "unripe", "vibrant", "watery", "well groomed", "woozy", "wiry", "worried"]
 
+/* A dictionary of assorted animals. Used for generated responses */
 var animals = ["aardvark", "albatross", "alligator", "alpaca", "anteater", "armadillo", 
 "babbon", "badger", "bald eagle", "bear", "beaver", "beluga whale", "bison", "bird", 
 "blowfish", "boa constrictor", "buffalo", "bullfrog", "butterfly", "camel", "caribou", 
@@ -29,7 +32,7 @@ var animals = ["aardvark", "albatross", "alligator", "alpaca", "anteater", "arma
 "sloth", "squirrel", "Stegasaurus", "toucan", "tarantula", "tiger", "turkey", "velociraptor", 
 "wallaby", "weasel", "whippersnapper", "wombat", "zebra"]
 
-
+/* A dictionary of assorted bakes. Used for generated responses */
 var bakes = ["look at yo 'velis false' jeans",
 "ol next friday pinky",
 "you look like a japanese snappin billy GOAT",
@@ -53,17 +56,27 @@ var bakes = ["look at yo 'velis false' jeans",
 "'uh un don't throw dem cans away, I'm goin to turn dem in tomorrow' ole shoopin cart pushin ass"
 ]
 
+/* vars created to generate random integers within the bounds of each dictionary. This will index you to a random item in the dictionary */
 var randombake;
 var randomadj;
 var randomanimal;
+
 var toSend;
 var len;
+
+/* The string version of the JSON */
 var r;
+
+/* Things Riley did to obtain substrings from the JSON */
 var namelong;
 var name;
 var userId;
+
+/* I am still unsure if this is used */
 var chunk;
 
+
+/* This function determines if the bot will respond to a certain message by triggering the bot based on a certain regex expression */
 function respond() {
   // chunk = this.req.chunks[0]
   var request = JSON.parse(this.req.chunks[0]), //length is one
@@ -91,7 +104,7 @@ function respond() {
 }
 
 
-
+/* This function generates a message to be posted to by the bot */
 function postMessage() {
   var botResponse, options, body, botReq;
   randombake = Math.floor(Math.random() * (bakes.length - 0 + 1)) + 0;
