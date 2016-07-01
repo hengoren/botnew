@@ -37,7 +37,21 @@ var bakes = ["look at yo 'velis false' jeans",
 "I dont understand why everybody gotta HATE",
 "I only fucks with lil b &kids bop.! -_____-",
 "get off the computer and Lose some WEIGHT",
-"where yall going, can i go too.? HELL NAWW.!!!"]
+"where yall going, can i go too.? HELL NAWW.!!!",
+"big Worm without the perm neckahh",
+"only time i ever came close to fuckin is when I typed in http://pornhub.com  lookin ass ..  coco butter over deez hoes faceahh ",
+"smushed toostie roll dat done been stepped on by 6 big ass niggas",
+"Chris Brown before he thought about hitting Rihanna lookin .. The only time i get high is if another nigga roll the blunt",
+"ol' stank breath chewing on gum blowing ass bubbles",
+"ol' fubu walmart no style havin'",
+"ol' southpark both feet moving at the same damn time ",
+"lap dance givin hippo neck ass foot workin goose 'jing a lang jing a lang.. U GONE EAT YO CORNBREAD'",
+"melted sour patch kidz and spoiled tuna fish eating azz.",
+"egg Nog 50% off after. Christmas buying azz.",
+"ole swole chest skinny leg havin azz",
+"ole sketchers shape-upz wearin ass",
+"'uh un don't throw dem cans away, I'm goin to turn dem in tomorrow' ole shoopin cart pushin ass"
+]
 
 var randomnumber;
 var toSend;
@@ -45,22 +59,24 @@ var len;
 var r;
 var namelong;
 var name;
+var userId;
+var chunk;
 
 function respond() {
+  // chunk = this.req.chunks[0]
   var request = JSON.parse(this.req.chunks[0]), //length is one
-      //botRegex = /^./;
-      botRegex = /^\/cool guy$/;
+      botRegex = /^./;
+      // botRegex = /^roast/;
 
-      
+
+  // toSend = request.text.substring(5,request.text.length)
+
   r = JSON.stringify(request, null, 4);
-
-  //var groupID = request.group_id;
-
-
   namelong = r.substring(r.indexOf('"name":') + 9, (r.indexOf('"sender_id":') - 4))
   name = namelong.substring(0,namelong.length-3)
+  userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
 
-  if(request.text && botRegex.test(request.text)) {
+  if(request.text && botRegex.test(request.text) && userId != '346039"') {  //&& userId != '346039"' 2100646 //&& userId =='346039"'
     toSend = request.text;
     this.res.writeHead(200);
     postMessage();
@@ -71,6 +87,8 @@ function respond() {
     this.res.end();
   }
 }
+
+
 
 function postMessage() {
   var botResponse, options, body, botReq;
@@ -86,8 +104,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-     "text" : name + ", you look like this guy \n \n" + botResponse + "\n \n wit yo " + bakes[randomnumber] + " lookin ass!!!"
-    //"text" : typeof request
+    "text" :  name + ", boi you look like this thing \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randomnumber] + " head ass like shit boi"
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
@@ -108,7 +125,6 @@ function postMessage() {
   });
   botReq.end(JSON.stringify(body));
 }
-
 
 
 exports.respond = respond;
