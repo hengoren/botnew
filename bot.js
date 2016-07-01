@@ -53,7 +53,9 @@ var bakes = ["look at yo 'velis false' jeans",
 "'uh un don't throw dem cans away, I'm goin to turn dem in tomorrow' ole shoopin cart pushin ass"
 ]
 
-var randomnumber;
+var randombake;
+var randomadj;
+var randomanimal;
 var toSend;
 var len;
 var r;
@@ -92,7 +94,9 @@ function respond() {
 
 function postMessage() {
   var botResponse, options, body, botReq;
-  randomnumber = Math.floor(Math.random() * (bakes.length - 0 + 1)) + 0;
+  randombake = Math.floor(Math.random() * (bakes.length - 0 + 1)) + 0;
+  randomadj = Math.floor(Math.random() * (adjectives.length - 0 + 1)) + 0;
+  randomanimal = Math.floor(Math.random() * (animals.length - 0 + 1)) + 0;
 
   botResponse = cool();
 
@@ -104,7 +108,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" :  name + ", boi you look like this thing \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randomnumber] + " head ass like shit boi"
+    "text" :  "cmon" + name + ", boi yo look like a muhfuckin" + adjectives[randomadj] + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
     //"text" :  r
   };
 
