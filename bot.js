@@ -69,10 +69,10 @@ var len;
 var r;
 
 /* Things Riley did to obtain substrings from the JSON */
-// var namelong;
-// var name;
+// var rileyNamelong;
+// var rileyName;
 var userId;
-var harryname;
+var name;
 
 /* I am still unsure if this is used */
 var chunk;
@@ -89,8 +89,8 @@ function respond() {
   // toSend = request.text.substring(5,request.text.length)
 
   r = JSON.stringify(request, null, 4);
-  // namelong = r.substring(r.indexOf('"name":') + 9, (r.indexOf('"sender_id":') - 4))
-  // name = namelong.substring(0, namelong.length - 3)
+  // rileyNamelong = r.substring(r.indexOf('"name":') + 9, (r.indexOf('"sender_id":') - 4))
+  // rileyName = rileyNamelong.substring(0, rileyNamelong.length - 3)
   userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
   harryname = request.name;
 
@@ -128,8 +128,8 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" :  "cmon " + harryname + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
-    //"text" :  r
+    //"text" :  "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
+    "text" :  r
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
