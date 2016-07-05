@@ -63,7 +63,7 @@ var bakes = ["look at yo 'velis false' jeans",
 var randombake;
 var randomadj;
 var randomanimal;
-var randomdolan;
+//var randomdolan;
 
 var toSend;
 var len;
@@ -149,7 +149,7 @@ function postMessage() {
   randombake = Math.floor(Math.random() * (bakes.length - 0 + 1)) + 0;
   randomadj = Math.floor(Math.random() * (adjectives.length - 0 + 1)) + 0;
   randomanimal = Math.floor(Math.random() * (animals.length - 0 + 1)) + 0;
-  randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
+  //randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
   randomresponse = Math.floor(Math.random() * 2)
 
   botResponse = cool();
