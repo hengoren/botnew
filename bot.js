@@ -122,15 +122,15 @@ function respond() {
 
 
 
-  // if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
-  if (userId != '345971"') {
-    if(request.text && botRegex.test(request.text)) {
+  if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
+  // if (userId != '345971"') {
+  //   if(request.text && botRegex.test(request.text)) {
     toSend = request.text;
     this.res.writeHead(200);
     postMessage();
     this.res.end();
     } 
-  } 
+  // } 
   else {
     console.log("don't care");
     this.res.writeHead(200);
