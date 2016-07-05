@@ -69,8 +69,8 @@ var len;
 var r;
 
 /* Things Riley did to obtain substrings from the JSON */
-var namelong;
-var name;
+// var namelong;
+// var name;
 var userId;
 var harryname;
 
@@ -89,8 +89,8 @@ function respond() {
   // toSend = request.text.substring(5,request.text.length)
 
   r = JSON.stringify(request, null, 4);
-  namelong = r.substring(r.indexOf('"name":') + 9, (r.indexOf('"sender_id":') - 4))
-  name = namelong.substring(0, namelong.length - 3)
+  // namelong = r.substring(r.indexOf('"name":') + 9, (r.indexOf('"sender_id":') - 4))
+  // name = namelong.substring(0, namelong.length - 3)
   userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
   harryname = request.name;
 
