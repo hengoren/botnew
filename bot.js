@@ -57,7 +57,7 @@ var bakes = ["look at yo 'velis false' jeans",
 "with your boot nose ass, loose tobacco smellin ass...wrestlin mat smellin ass"
 ]
 
-var dolanLibrary = ["fuk u", "pls"]
+// var dolanLibrary = ["fuk u", "pls"]
 
 /* vars created to generate random integers within the bounds of each dictionary. This will index you to a random item in the dictionary */
 var randombake;
