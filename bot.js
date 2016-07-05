@@ -114,7 +114,7 @@ function respond() {
   // group_id = request.group_id;
   // id = request.id;
   // sender_id = request.sender_id;
-  // sender_type = request.sender_type;
+   sender_type = request.sender_type;
   // source_guid = request.source_guid;
   // system = request.system;
   // text = request.text;
@@ -124,13 +124,14 @@ function respond() {
 
   // if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
   //if (userId != '345971"') {
+    if (sender_id != bot) {
     if(request.text && botRegex.test(request.text)) {
     toSend = request.text;
     this.res.writeHead(200);
     postMessage();
     this.res.end();
     } 
-  //} 
+  } 
   else {
     console.log("don't care");
     this.res.writeHead(200);
