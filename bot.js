@@ -72,6 +72,7 @@ var r;
 var namelong;
 var name;
 var userId;
+var harryname;
 
 /* I am still unsure if this is used */
 var chunk;
@@ -91,13 +92,18 @@ function respond() {
   namelong = r.substring(r.indexOf('"name":') + 9, (r.indexOf('"sender_id":') - 4))
   name = namelong.substring(0, namelong.length - 3)
   userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
+  harryname = request.name;
 
-  if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
+  // if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
+  if (userId != '345971"') {
+    if(request.text && botRegex.test(request.text)) {
     toSend = request.text;
     this.res.writeHead(200);
     postMessage();
     this.res.end();
-  } else {
+    } 
+  } 
+  else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
@@ -122,7 +128,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" :  "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
+    "text" :  "cmon " + harryname + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
     //"text" :  r
   };
 
