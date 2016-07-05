@@ -114,7 +114,7 @@ function respond() {
   // group_id = request.group_id;
   // id = request.id;
   // sender_id = request.sender_id;
-   sender_type = request.sender_type;
+   //sender_type = request.sender_type;
   // source_guid = request.source_guid;
   // system = request.system;
   // text = request.text;
@@ -124,7 +124,7 @@ function respond() {
 
   // if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
   //if (userId != '345971"') {
-  if (sender_type != bot) {
+  //if (sender_type != bot) {
     if(request.text && botRegex.test(request.text)) {
     toSend = request.text;
     this.res.writeHead(200);
@@ -157,8 +157,8 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    //"text" :  "july, cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
-    "text" :  sender_type + "\n" + r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
+    "text" :  "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
+    //"text" :  sender_type + "\n" + r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
               //"\n sender_id: " + sender_id + "\n source_guid: " + source_guid + "\n system: " + system + "\n text: " + text + "\n user_id: " + user_id;
   };
 
