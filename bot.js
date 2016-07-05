@@ -72,7 +72,20 @@ var r;
 // var rileyNamelong;
 // var rileyName;
 var userId;
+
+/* JSON keywords that come along with messages */
+var attatchments;
+var avatar_url;
+var created_at;
+var group_id;
+var id;
 var name;
+var sender_id;
+var sender_type;
+var srouce_guid;
+var system;
+var text;
+var user_id;
 
 /* I am still unsure if this is used */
 var chunk;
@@ -92,7 +105,22 @@ function respond() {
   // rileyNamelong = r.substring(r.indexOf('"name":') + 9, (r.indexOf('"sender_id":') - 4))
   // rileyName = rileyNamelong.substring(0, rileyNamelong.length - 3)
   userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
-  harryname = request.name;
+  
+  /* set variables to JSON correspondent */
+  attatchments = request.attatchments;
+  name = request.name;
+  avatar_url = request.avatar_url;
+  created_at = request.created_at;
+  group_id = request.group_id;
+  id = request.id;
+  sender_id = request.sender_id;
+  sender_type = request.sender_type;
+  source_guid = request.source_guid;
+  system = request.system;
+  text = request.text;
+  user_id = request.user_id;
+
+
 
   // if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
   if (userId != '345971"') {
