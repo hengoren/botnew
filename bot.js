@@ -57,13 +57,13 @@ var bakes = ["look at yo 'velis false' jeans",
 "with your boot nose ass, loose tobacco smellin ass...wrestlin mat smellin ass"
 ]
 
-// var dolanLibrary = ["fuk u", "pls"]
+var dolanLibrary = ["fuk u", "pls"]
 
 /* vars created to generate random integers within the bounds of each dictionary. This will index you to a random item in the dictionary */
 var randombake;
 var randomadj;
 var randomanimal;
-//var randomdolan;
+var randomdolan;
 
 var toSend;
 var len;
@@ -149,7 +149,7 @@ function postMessage() {
   randombake = Math.floor(Math.random() * (bakes.length - 0 + 1)) + 0;
   randomadj = Math.floor(Math.random() * (adjectives.length - 0 + 1)) + 0;
   randomanimal = Math.floor(Math.random() * (animals.length - 0 + 1)) + 0;
-  //randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
+  randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
   randomresponse = Math.floor(Math.random() * 2)
 
   botResponse = cool();
@@ -161,12 +161,11 @@ function postMessage() {
   };
 
   body = {
-    "bot_id" : botID,
-      "text" : "lego";
-    //"text" :  "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
-    //"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
-              //"\n sender_id: " + sender_id + "\n source_guid: " + source_guid + "\n system: " + system + "\n text: " + text + "\n user_id: " + user_id;
-  };
+   "bot_id" : botID,
+   "text" :  dolanLibrary[randomdolan] + "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
+   //"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
+             //"\n sender_id: " + sender_id + "\n source_guid: " + source_guid + "\n system: " + system + "\n text: " + text + "\n user_id: " + user_id;
+ };
 
   console.log('sending ' + botResponse + ' to ' + botID);
 
