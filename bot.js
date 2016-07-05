@@ -114,7 +114,7 @@ function respond() {
   // group_id = request.group_id;
   // id = request.id;
   // sender_id = request.sender_id;
-  //  sender_type = request.sender_type;
+  // sender_type = request.sender_type;
   // source_guid = request.source_guid;
   // system = request.system;
   // text = request.text;
