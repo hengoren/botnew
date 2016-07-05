@@ -74,18 +74,18 @@ var r;
 var userId;
 
 /* JSON keywords that come along with messages */
-var attatchments;
-var avatar_url;
-var created_at;
-var group_id;
-var id;
+// var attatchments;
+// var avatar_url;
+// var created_at;
+// var group_id;
+// var id;
 var name;
-var sender_id;
-var sender_type;
-var source_guid;
-var system;
-var text;
-var user_id;
+// var sender_id;
+// var sender_type;
+// var source_guid;
+// var system;
+// var text;
+// var user_id;
 
 /* I am still unsure if this is used */
 var chunk;
