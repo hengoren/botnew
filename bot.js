@@ -57,10 +57,7 @@ var bakes = ["look at yo 'velis false' jeans",
 "with your boot nose ass, loose tobacco smellin ass...wrestlin mat smellin ass"
 ]
 
-var dolanLibrary = [
-"fuk u", 
-"pls"
-]
+var dolanLibrary = ["fuk u", "pls"]
 
 /* vars created to generate random integers within the bounds of each dictionary. This will index you to a random item in the dictionary */
 var randombake;
@@ -164,12 +161,12 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    if (randomdolan % 2 == 0) {
+    // if (randomdolan % 2 == 0) {
       "text" : name + dolanLibrary[randomdolan];
-    }
-    else {
-      "text" : dolanLibrary[randomdolan] + name;
-    }
+    // }
+    // else {
+    //   "text" : dolanLibrary[randomdolan] + name;
+    // }
     //"text" :  "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
     //"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
               //"\n sender_id: " + sender_id + "\n source_guid: " + source_guid + "\n system: " + system + "\n text: " + text + "\n user_id: " + user_id;
