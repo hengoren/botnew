@@ -107,30 +107,30 @@ function respond() {
   userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
   
   /* set variables to JSON correspondent */
-  attatchments = request.attatchments;
-  name = request.name;
-  avatar_url = request.avatar_url;
-  created_at = request.created_at;
-  group_id = request.group_id;
-  id = request.id;
-  sender_id = request.sender_id;
-  sender_type = request.sender_type;
-  source_guid = request.source_guid;
-  system = request.system;
-  text = request.text;
-  user_id = request.user_id;
+  // attatchments = request.attatchments;
+  // name = request.name;
+  // avatar_url = request.avatar_url;
+  // created_at = request.created_at;
+  // group_id = request.group_id;
+  // id = request.id;
+  // sender_id = request.sender_id;
+  // sender_type = request.sender_type;
+  // source_guid = request.source_guid;
+  // system = request.system;
+  // text = request.text;
+  // user_id = request.user_id;
 
 
 
-  if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
-  // if (userId != '345971"') {
-  //   if(request.text && botRegex.test(request.text)) {
+  // if(request.text && botRegex.test(request.text) && userId != '345971"') {  //&& userId != '345971"' 2100646 //&& userId =='345971"'
+  if (userId != '345971"') {
+    if(request.text && botRegex.test(request.text)) {
     toSend = request.text;
     this.res.writeHead(200);
     postMessage();
     this.res.end();
     } 
-  // } 
+  } 
   else {
     console.log("don't care");
     this.res.writeHead(200);
