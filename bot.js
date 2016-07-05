@@ -108,7 +108,7 @@ function respond() {
   
   /* set variables to JSON correspondent */
   // attatchments = request.attatchments;
-  // name = request.name;
+  name = request.name;
   // avatar_url = request.avatar_url;
   // created_at = request.created_at;
   // group_id = request.group_id;
