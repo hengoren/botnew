@@ -54,7 +54,21 @@ var bakes = ["look at yo 'velis false' jeans",
 "ole swole chest skinny leg havin azz",
 "ole sketchers shape-upz wearin ass",
 "'uh un don't throw dem cans away, I'm goin to turn dem in tomorrow' ole shoopin cart pushin ass", 
-"with your boot nose ass, loose tobacco smellin ass...wrestlin mat smellin ass"
+"with your boot nose ass, loose tobacco smellin ass...wrestlin mat smellin ass", 
+"Butter back bacon neck ass, look like yo ass fuck car mufflers and midgets boa ", 
+"look like yo ass sell dvds and socks on madison and pulaski ol super dome head ass", 
+"look mommy, im a big kid now!", 
+"Lookin ass gheri curl wit a hi top fade lookin ass", 
+"Ole camouflage snuggie wearin ass", 
+"Ole la gear light up shoes havin ass", 
+"Ole bushwackin ass nikkah ", 
+"Ole boosie fade wit a rat tail in da back havin azz boi ", 
+"Ole yo gabba gabba yellow shirt orange pants wearin ass nikkah", 
+"Ole clip my toenails in the sink ass", 
+"Lego. Ole Lego my eggo waffle eatin ass", 
+"Ole chat line callin ass nikkah. Meet bitches on Craigslist ass boi.", 
+"Ole yellow hard hat blue jean cutoff wit sum buckwheat Tim's wearin ass nikkah!!!", 
+"ole lunchable eatin ass boi. Ole I think I can I think I can little engine that could ass boi."
 ]
 
 var dolanLibrary = ["fuk u", "pls"]
@@ -98,7 +112,7 @@ var chunk;
 function respond() {
   // chunk = this.req.chunks[0]
   var request = JSON.parse(this.req.chunks[0]), //length is one
-      botRegex = /it/;
+      botRegex = /u/;
       //botRegex = /^\/cool guy$/;
 
 
