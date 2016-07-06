@@ -98,7 +98,7 @@ var chunk;
 function respond() {
   // chunk = this.req.chunks[0]
   var request = JSON.parse(this.req.chunks[0]), //length is one
-      botRegex = /\w/;
+      botRegex = /it/;
       //botRegex = /^\/cool guy$/;
 
 
