@@ -171,7 +171,7 @@ function postMessage() {
   var infrequentresponse;
 
   if (infrequent % 2 == 0) {
-    infrequentresponse = "Hey " + name + ", touch me! I love being played with " + cool()
+    infrequentresponse = "Ohhh yeahhh " + name + ", stroke me. Right there. feeeelss gooood. " + cool()
   }
 
   if (randomresponse == 0) {
