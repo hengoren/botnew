@@ -78,6 +78,7 @@ var randombake;
 var randomadj;
 var randomanimal;
 var randomdolan;
+var infrequent;
 
 var toSend;
 var len;
@@ -164,14 +165,22 @@ function postMessage() {
   randomadj = Math.floor(Math.random() * (adjectives.length - 0 + 1)) + 0;
   randomanimal = Math.floor(Math.random() * (animals.length - 0 + 1)) + 0;
   randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
-  randomresponse = Math.floor(Math.random() * 2)
+  randomresponse = Math.floor(Math.random() * 2);
+  infrequent = Math.floor(Math.random() * 20);
   var randostring;
+  var infrequentresponse;
+
+  if (infrequent == 0) {
+    infrequentresponse = "Hey " + name + ", touch me! I love being played with" + botResponse;
+  }
+
   if (randomresponse == 0) {
     randostring = "fuk u " + name
   }
   else {
     randostring = name + " pls"
   }
+
 
   botResponse = cool();
 
@@ -183,8 +192,9 @@ function postMessage() {
 
   body = {
    "bot_id" : botID,
+   "text" : infrequentresponse
    //"text" : randostring
-   "text" : "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
+   //"text" : "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
    //"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
              //"\n sender_id: " + sender_id + "\n source_guid: " + source_guid + "\n system: " + system + "\n text: " + text + "\n user_id: " + user_id;
  };
