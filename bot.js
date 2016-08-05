@@ -170,7 +170,7 @@ function postMessage() {
   var randostring;
   var infrequentresponse;
 
-  if (infrequent == 0) {
+  if (infrequent % 2 == 0) {
     infrequentresponse = "Hey " + name + ", touch me! I love being played with" + botResponse;
   }
 
