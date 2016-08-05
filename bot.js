@@ -171,7 +171,7 @@ function postMessage() {
   var infrequentresponse;
 
   if (infrequent % 2 == 0) {
-    infrequentresponse = "Hey " + name + ", touch me! I love being played with" + botResponse
+    infrequentresponse = "Hey " + name + ", touch me! I love being played with "
   }
 
   if (randomresponse == 0) {
@@ -192,7 +192,7 @@ function postMessage() {
 
   body = {
    "bot_id" : botID,
-   "text" : infrequentresponse
+   "text" : infrequentresponse + botResponse
    //"text" : randostring
    //"text" : "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
    //"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
