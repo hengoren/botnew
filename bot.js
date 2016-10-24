@@ -73,24 +73,6 @@ var bakes = ["look at yo 'velis false' jeans",
 
 var dolanLibrary = ["fuk u", "pls"]
 
-/*var funFacts = ["11% of people are left handed", "August has the highest percentage of birhts", 
-"unless food is mixed with saliva you can't taste it", "the average person falls asleep in 7 minutes",
-"a bear has 42 teeth", "an ostrich's eye is bigger than its brain", "lemons contain more sugar than strawberries",
-"8% of people have an extra rib", "Ralph Lauren's original name was Ralph Lifshitz", "rabbits like licorice",
-"the Hawaiian alphabet has 13 letters", "armadillos have 4 babies at a time and are all the same sex", 
-"reindeer like bananas", "the longest recorded flight of a chicken was 13 seconds", 
-"birds need gravity to swallow", "dreamt is the only word that ends in mt", "a cat has 32 muscles in each ear", 
-"goldfish can see both infrared and ultraviolet light", "the samllest bones in the human body are found in the penis", 
-"money is the number one thing couples argue about", "macademia nuts are toxic to dogs", 
-"stewardesses is the longest word typed with only the left hand", "honey is the only natural food that never spoils", 
-"about 90% of the world's population kisses", "Coca-Cola originally contained small amounts of cocaine", 
-"toliets account for 35% of indoor water use", "the fortune cookie was invented in San Francisco", 
-"Koalas sleep around 18 hours a day", "all insects have 6 legs", "in Eastern Africa you can buy beer brewed from bananas", 
-"a giraffe can clean its ears with its 21 inch tongue", "the Grand Canyon can hold around 900 trillion footballs", 
-"sponges can hold more cold water than hot", "cats have over 100 vocal chords", "fire usually moves faster uphill than downhill", 
-"frogs can't swallow with their eyes open", "elephants are the only mammal that can't jump"]
-*/
-
 /* vars created to generate random integers within the bounds of each dictionary. This will index you to a random item in the dictionary */
 var randombake;
 var randomadj;
@@ -185,18 +167,17 @@ function postMessage() {
   randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
   randomresponse = Math.floor(Math.random() * 3);
   infrequent = Math.floor(Math.random() * 20);
-  //randomfunfact = Math.floor(Math.random() * (funFacts.length - 0 + 1)) + 0;
   var randostring;
   var infrequentresponse;
 
   if (infrequent % 2 == 0) {
-    infrequentresponse = "Hey " + name + ", did you know " + randomdolan
+    infrequentresponse = "Ohhh yeahhh " + name + ", stroke me. Right there. feeeelss gooood. " + cool()
   }
 
   if (randomresponse == 0) {
     randostring = "fuk u " + name
   }
-  else if {
+  else {
     randostring = name + " pls"
   }
 
