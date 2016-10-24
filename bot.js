@@ -184,14 +184,14 @@ function postMessage() {
   randomadj = Math.floor(Math.random() * (adjectives.length - 0 + 1)) + 0;
   randomanimal = Math.floor(Math.random() * (animals.length - 0 + 1)) + 0;
   randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
-  randomresponse = Math.floor(Math.random() * 3);
+  randomresponse = Math.floor(Math.random() * 2);
   infrequent = Math.floor(Math.random() * 20);
   randomfunfact = Math.floor(Math.random() * (funFacts.length - 0 + 1)) + 0;
   var randostring;
   var infrequentresponse;
 
   if (infrequent % 2 == 0) {
-    infrequentresponse = "Ohhh yeahhh " + name + ", stroke me. Right there. feeeelss gooood. " + cool()
+    infrequentresponse = "Hey " + name + ", did you know " + randomfunfact
   }
 
   if (randomresponse == 0) {
