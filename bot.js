@@ -97,6 +97,7 @@ var randomadj;
 var randomanimal;
 var randomdolan;
 var infrequent;
+var randomfunfact;
 
 var toSend;
 var len;
@@ -185,6 +186,7 @@ function postMessage() {
   randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
   randomresponse = Math.floor(Math.random() * 3);
   infrequent = Math.floor(Math.random() * 20);
+  randomfunfact = Math.floor(Math.random() * (funFacts.length - 0 + 1)) + 0;
   var randostring;
   var infrequentresponse;
 
