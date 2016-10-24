@@ -73,7 +73,7 @@ var bakes = ["look at yo 'velis false' jeans",
 
 var dolanLibrary = ["fuk u", "pls"]
 
-var funFacts = ["11% of people are left handed", "August has the highest percentage of birhts", 
+/*var funFacts = ["11% of people are left handed", "August has the highest percentage of birhts", 
 "unless food is mixed with saliva you can't taste it", "the average person falls asleep in 7 minutes",
 "a bear has 42 teeth", "an ostrich's eye is bigger than its brain", "lemons contain more sugar than strawberries",
 "8% of people have an extra rib", "Ralph Lauren's original name was Ralph Lifshitz", "rabbits like licorice",
@@ -89,6 +89,7 @@ var funFacts = ["11% of people are left handed", "August has the highest percent
 "a giraffe can clean its ears with its 21 inch tongue", "the Grand Canyon can hold around 900 trillion footballs", 
 "sponges can hold more cold water than hot", "cats have over 100 vocal chords", "fire usually moves faster uphill than downhill", 
 "frogs can't swallow with their eyes open", "elephants are the only mammal that can't jump"]
+*/
 
 /* vars created to generate random integers within the bounds of each dictionary. This will index you to a random item in the dictionary */
 var randombake;
@@ -184,12 +185,12 @@ function postMessage() {
   randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
   randomresponse = Math.floor(Math.random() * 3);
   infrequent = Math.floor(Math.random() * 20);
-  randomfunfact = Math.floor(Math.random() * (funFacts.length - 0 + 1)) + 0;
+  //randomfunfact = Math.floor(Math.random() * (funFacts.length - 0 + 1)) + 0;
   var randostring;
   var infrequentresponse;
 
   if (infrequent % 2 == 0) {
-    infrequentresponse = "Hey " + name + ", did you know " + randomfunfact
+    infrequentresponse = "Hey " + name + ", did you know " + randomdolan
   }
 
   if (randomresponse == 0) {
