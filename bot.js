@@ -191,7 +191,7 @@ function postMessage() {
   var infrequentresponse;
 
   if (infrequent % 2 == 0) {
-    infrequentresponse = "Hey " + name + ", did you know " + randomfunfact
+    infrequentresponse = "Hey " + name + ", did you know " + funFacts[randomfunfact]
   }
 
   if (randomresponse == 0) {
