@@ -185,13 +185,17 @@ function postMessage() {
   randomanimal = Math.floor(Math.random() * (animals.length - 0 + 1)) + 0;
   randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
   randomresponse = Math.floor(Math.random() * 2);
-  infrequent = Math.floor(Math.random() * 20);
+  infrequent = Math.floor(Math.random() * 100);
   randomfunfact = Math.floor(Math.random() * (funFacts.length - 0 + 1)) + 0;
   var randostring;
   var infrequentresponse;
 
-  if (infrequent % 5 == 0) {
+  if (infrequent % 10 == 0) {
     infrequentresponse = "Hey " + name + ", did you know " + funFacts[randomfunfact]
+  }
+
+  else if (infrequent == 17) {
+    infrequentresponse = "Damn " + name + ", has anyone ever told you that you kinda look like a " + adjectives[randomadj] + animals[randomanimal]
   }
 
   if (randomresponse == 0) {
