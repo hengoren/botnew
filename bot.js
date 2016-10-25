@@ -226,7 +226,7 @@ function postMessage() {
   }
   */
 
-  if (infrequent % 10 == 0) {
+  if (infrequent > 0) {
     bot.ask(text, function (err, response) {
       console.log(response)
       //infrequentresponse = response;
