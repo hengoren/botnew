@@ -194,7 +194,7 @@ function postMessage() {
     infrequentresponse = "Hey " + name + ", did you know " + funFacts[randomfunfact]
   }
 
-  else if (infrequent == 17) {
+  else if (infrequent % 10 == 1) {
     infrequentresponse = "Damn " + name + ", has anyone ever told you that you kinda look like a " + adjectives[randomadj] + animals[randomanimal]
   }
 
