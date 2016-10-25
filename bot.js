@@ -88,7 +88,7 @@ var funFacts = ["11% of people are left handed", "August has the highest percent
 "Koalas sleep around 18 hours a day", "all insects have 6 legs", "in Eastern Africa you can buy beer brewed from bananas", 
 "a giraffe can clean its ears with its 21 inch tongue", "the Grand Canyon can hold around 900 trillion footballs", 
 "sponges can hold more cold water than hot", "cats have over 100 vocal chords", "fire usually moves faster uphill than downhill", 
-"frogs can't swallow with their eyes open", "elephants are the only mammal that can't jump"]
+"frogs can't swallow with their eyes open", "elephants are the only mammal that can't jump", "Paul Davidson has four children tied up in a cellar somewhere"]
 
 
 /* vars created to generate random integers within the bounds of each dictionary. This will index you to a random item in the dictionary */
