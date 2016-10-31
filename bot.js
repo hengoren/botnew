@@ -246,7 +246,6 @@ function postMessage() {
 
 
   //put all this in a function called postToGroup 
-  //funciton postToGroup() {
     botResponse = cool();
 
     options = {
@@ -281,7 +280,7 @@ function postMessage() {
       console.log('timeout posting message '  + JSON.stringify(err));
     });
     botReq.end(JSON.stringify(body));
+  }
   
 
-    exports.respond = respond;
-    //}
+  exports.respond = respond;
