@@ -228,9 +228,9 @@ function postMessage() {
 
   if (infrequent > 0) {
     bot.ask(text, function (err, response) {
-      //console.log(response)
-      infrequentresponse = response;
-      postToGroup(infrequentresponse);
+      console.log(response)
+      //infrequentresponse = response;
+      //postToGroup(infrequentresponse);
     });
   }
 
@@ -246,7 +246,7 @@ function postMessage() {
 
 
   //put all this in a function called postToGroup 
-  funciton postToGroup() {
+  //funciton postToGroup() {
     botResponse = cool();
 
     options = {
@@ -284,4 +284,4 @@ function postMessage() {
   
 
     exports.respond = respond;
-  }
+    //}
