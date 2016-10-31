@@ -245,41 +245,41 @@ function postMessage() {
   */
 
 
-  //put all this in a function called postToGroup 
-    botResponse = cool();
 
-    options = {
-      hostname: 'api.groupme.com',
-      path: '/v3/bots/post',
-      method: 'POST'
-    };
+  botResponse = cool();
 
-    body = {
-     "bot_id" : botID,
-     "text" : infrequentresponse
-     //"text" : randostring
-     //"text" : "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
-     //"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
-               //"\n sender_id: " + sender_id + "\n source_guid: " + source_guid + "\n system: " + system + "\n text: " + text + "\n user_id: " + user_id;
-   };
+  options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+  };
 
-    console.log('sending ' + botResponse + ' to ' + botID);
+  body = {
+   "bot_id" : botID,
+   "text" : infrequentresponse
+   //"text" : randostring
+   //"text" : "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
+   //"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
+             //"\n sender_id: " + sender_id + "\n source_guid: " + source_guid + "\n system: " + system + "\n text: " + text + "\n user_id: " + user_id;
+ };
 
-    botReq = HTTPS.request(options, function(res) {
-        if(res.statusCode == 202) {
-          //neat
-        } else {
-          console.log('rejecting bad status code ' + res.statusCode);
-        }
-    });
+  console.log('sending ' + botResponse + ' to ' + botID);
 
-    botReq.on('error', function(err) {
-      console.log('error posting message '  + JSON.stringify(err));
-    });
-    botReq.on('timeout', function(err) {
-      console.log('timeout posting message '  + JSON.stringify(err));
-    });
-    botReq.end(JSON.stringify(body));
+  botReq = HTTPS.request(options, function(res) {
+      if(res.statusCode == 202) {
+        //neat
+      } else {
+        console.log('rejecting bad status code ' + res.statusCode);
+      }
+  });
+
+  botReq.on('error', function(err) {
+    console.log('error posting message '  + JSON.stringify(err));
+  });
+  botReq.on('timeout', function(err) {
+    console.log('timeout posting message '  + JSON.stringify(err));
+  });
+  botReq.end(JSON.stringify(body));
   
 
   exports.respond = respond;
