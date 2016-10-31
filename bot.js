@@ -228,7 +228,7 @@ function postMessage() {
 
   if (infrequent > 0) {
     bot.ask(text, function (err, response) {
-      console.log(response)
+      console.log(response);
       //infrequentresponse = response;
       //postToGroup(infrequentresponse);
     });
