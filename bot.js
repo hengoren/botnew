@@ -216,7 +216,7 @@ function postMessage() {
 
 
   //working mark the marmot code
-  /*
+  
   if (infrequent % 10 == 0) {
     infrequentresponse = "Hey " + name + ", did you know " + funFacts[randomfunfact]
   }
@@ -224,15 +224,17 @@ function postMessage() {
   else if (infrequent % 10 == 1) {
     infrequentresponse = "Damn " + name + ", has anyone ever told you that you kinda look like a " + adjectives[randomadj] + animals[randomanimal]
   }
-  */
+  
 
-  if (infrequent > 0) {
-    bot.ask(text, function (err, response) {
-      console.log(response);
-      //infrequentresponse = response;
-      //postToGroup(infrequentresponse);
-    });
-  }
+  
+// attempted cleverbot code
+  // if (infrequent > 0) {
+  //   // bot.ask(text, function (err, response) {
+  //     console.log(response);
+  //     infrequentresponse = response;
+  //     // postToGroup(infrequentresponse);
+  //   });
+  // }
 
   //working dolan code
   /*
