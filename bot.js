@@ -1,19 +1,8 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
-// //cleverbot trials
-// var cleverbot = require('cleverbot.io'),
-// var bot = new cleverbot('i0iopWpp0WNx4gzi','BNW6k9LebqTFXcEt2mNRVslJAiDBDAnx');
-
-// bot.create(function (err, session) {
-//   //session is your session name, it will either be as you set it or cleverbot.io
-//   //will generate one for you
-
-//   //initialized cleverbot.io, insert further code here
-// });
-
-// /* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
-// var botID = process.env.BOT_ID;
+/* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
+var botID = process.env.BOT_ID;
 
 /* A dictionary of assorted adjectives. Used for generated responses */
 var adjectives = ["abandoned", "able", "absolute", "adorable", "adventerous", "academic", "acceptable", "acclaimed", "accomplished", "accurate", 
@@ -110,10 +99,6 @@ var randomdolan;
 var infrequent;
 var randomfunfact;
 
-//cleverbot
-//var smartreadin;
-//var smartout;
-
 var toSend;
 var len;
 
@@ -169,7 +154,7 @@ function respond() {
   // sender_type = request.sender_type;
   // source_guid = request.source_guid;
   // system = request.system;
-  text = request.text;
+  // text = request.text;
   // user_id = request.user_id;
 
 
@@ -189,8 +174,6 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-  
-
 }
 
 
@@ -207,18 +190,6 @@ function postMessage() {
   var randostring;
   var infrequentresponse;
 
-
-  //cleverbot
-  /*
-  smartreadin = text;
-  smartout = bot.ask(smartreadin, function (err, response) {
-    console.log(response); //likely: "living in a lonely world"
-  });
-  */
-
-
-  //working mark the marmot code
-  
   if (infrequent % 10 == 0) {
     infrequentresponse = "Hey " + name + ", did you know " + funFacts[randomfunfact]
   }
@@ -226,28 +197,13 @@ function postMessage() {
   else if (infrequent % 10 == 1) {
     infrequentresponse = "Damn " + name + ", has anyone ever told you that you kinda look like a " + adjectives[randomadj] + animals[randomanimal]
   }
-  
 
-  
-// attempted cleverbot code
-  // if (infrequent > 0) {
-  //   // bot.ask(text, function (err, response) {
-  //     console.log(response);
-  //     infrequentresponse = response;
-  //     // postToGroup(infrequentresponse);
-  //   });
-  // }
-
-  //working dolan code
-  /*
   if (randomresponse == 0) {
     randostring = "fuk u " + name
   }
   else {
     randostring = name + " pls"
   }
-  */
-
 
 
   botResponse = cool();
@@ -284,6 +240,7 @@ function postMessage() {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
   botReq.end(JSON.stringify(body));
-  
+}
 
-  exports.respond = respond;
+
+exports.respond = respond;
