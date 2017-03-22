@@ -1,3 +1,21 @@
+// Skip to content
+// This repository
+// Search
+// Pull requests
+// Issues
+// Gist
+//  @hengoren
+//  Sign out
+//  Unwatch 1
+//   Star 0
+//   Fork 0 hengoren/botnew
+//  Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
+// Tree: f0a475bec9 Find file Copy pathbotnew/bot.js
+// f0a475b  on Oct 25, 2016
+// @hengoren hengoren working
+// 1 contributor
+// RawBlameHistory     
+// Executable File  246 lines (210 sloc)  11.8 KB
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
@@ -244,3 +262,5 @@ function postMessage() {
 
 
 exports.respond = respond;
+// Contact GitHub API Training Shop Blog About
+// © 2017 GitHub, Inc. Terms Privacy Security Status Help
