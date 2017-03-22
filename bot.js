@@ -202,19 +202,24 @@ function postMessage() {
   randomadj = Math.floor(Math.random() * (adjectives.length - 0 + 1)) + 0;
   randomanimal = Math.floor(Math.random() * (animals.length - 0 + 1)) + 0;
   randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
-  randomresponse = Math.floor(Math.random() * 2);
-  infrequent = Math.floor(Math.random() * 100);
+  // randomresponse = Math.floor(Math.random() * 2);
+  infrequent = Math.floor(Math.random() * 10000);
   randomfunfact = Math.floor(Math.random() * (funFacts.length - 0 + 1)) + 0;
   var randostring;
   var infrequentresponse;
 
-  if (infrequent % 10 == 0) {
+  if (infrequent % 100 == 0) {
     infrequentresponse = "Hey " + name + ", did you know " + funFacts[randomfunfact]
   }
 
-  else if (infrequent % 10 == 1) {
+  else if (infrequent % 100 == 1) {
     infrequentresponse = "Damn " + name + ", has anyone ever told you that you kinda look like a " + adjectives[randomadj] + " " + animals[randomanimal]
   }
+
+  else if (infrequent % 100 == 2) {
+    infrequentresponse = "I feel silly! " + botResponse
+  }
+
 
   if (randomresponse == 0) {
     randostring = "fuk u " + name
