@@ -1,19 +1,19 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
-//cleverbot trials
-var cleverbot = require('cleverbot.io'),
-var bot = new cleverbot('i0iopWpp0WNx4gzi','BNW6k9LebqTFXcEt2mNRVslJAiDBDAnx');
+// //cleverbot trials
+// var cleverbot = require('cleverbot.io'),
+// var bot = new cleverbot('i0iopWpp0WNx4gzi','BNW6k9LebqTFXcEt2mNRVslJAiDBDAnx');
 
-bot.create(function (err, session) {
-  //session is your session name, it will either be as you set it or cleverbot.io
-  //will generate one for you
+// bot.create(function (err, session) {
+//   //session is your session name, it will either be as you set it or cleverbot.io
+//   //will generate one for you
 
-  //initialized cleverbot.io, insert further code here
-});
+//   //initialized cleverbot.io, insert further code here
+// });
 
-/* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
-var botID = process.env.BOT_ID;
+// /* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
+// var botID = process.env.BOT_ID;
 
 /* A dictionary of assorted adjectives. Used for generated responses */
 var adjectives = ["abandoned", "able", "absolute", "adorable", "adventerous", "academic", "acceptable", "acclaimed", "accomplished", "accurate", 
@@ -189,6 +189,8 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
+  
+
 }
 
 
