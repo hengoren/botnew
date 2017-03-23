@@ -203,7 +203,7 @@ function postMessage() {
   randomanimal = Math.floor(Math.random() * (animals.length - 0 + 1)) + 0;
   randomdolan = Math.floor(Math.random() * (dolanLibrary.length - 0 + 1)) + 0;
   // randomresponse = Math.floor(Math.random() * 2);
-  infrequent = Math.floor(Math.random() * 10000);
+  infrequent = Math.floor(Math.random() * 1000);
   randomfunfact = Math.floor(Math.random() * (funFacts.length - 0 + 1)) + 0;
   var randostring;
   var infrequentresponse;
