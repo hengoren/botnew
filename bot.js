@@ -213,7 +213,7 @@ function postMessage() {
   }
 
   else if (infrequent % 10 == 1) {
-    infrequentresponse = "Damn " + name + ", has anyone ever told you that you kinda look like a " + adjectives[randomadj] + animals[randomanimal]
+    infrequentresponse = "Damn " + name + ", has anyone ever told you that you kinda look like a " + adjectives[randomadj] + " " +  animals[randomanimal]
   }
 
   if (randomresponse == 0) {
