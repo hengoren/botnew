@@ -207,7 +207,6 @@ function spongebobMock(text) {
     }
   }
   return newtext
-
 }
 
 /* This function generates a message to be posted to by the bot */
@@ -240,7 +239,7 @@ function postMessage() {
     randostring = name + " pls"
   }
 
-  mock = "Oh, you said " + text + "?? Haha idiot."
+  mock = spongebobMock(text)
 
 
   botResponse = cool();
