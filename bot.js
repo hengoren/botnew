@@ -223,7 +223,7 @@ var HttpClient = function() {
 
 
 /*API call*/
-// var client = new HttpClient();
+var client = new HttpClient();
 // client.get("https://www.cleverbot.com/getreply?key=CC2nuUKHueugZyumCinO_21JQuQ&input=will it still be there later this evening", function(response) {
 //   ourcleverbotreply = response
 // } );
