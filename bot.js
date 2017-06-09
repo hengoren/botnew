@@ -231,10 +231,6 @@ urlToCall = url + "?key=" + key + "&input=" + input
 
 fetch(urlToCall).then(function(reponse) {
   return response.json();
-}).then(function(data) {
-  console.log(data);
-}).catch(function() {
-  console.log("Booo");
 });
 
 
