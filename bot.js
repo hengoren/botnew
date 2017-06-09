@@ -200,9 +200,9 @@ function respond() {
 /*Cleverbot code */
 cleverbot = new Cleverbot;
 cleverbot.configure({botapi: "CC2nuUKHueugZyumCinO_21JQuQ"});
-cleverbotoutput = cleverbot.write(cleverMessage, function(response) {
-  console.log(response.output);
-});
+// cleverbotoutput = cleverbot.write(cleverMessage, function(response) {
+  // console.log(response.output);
+// });
 
 
 
