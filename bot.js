@@ -172,7 +172,7 @@ function respond() {
   // sender_type = request.sender_type;
   // source_guid = request.source_guid;
   // system = request.system;
-  // text = request.text;
+  text = request.text;
   // user_id = request.user_id;
 
 
@@ -207,6 +207,8 @@ function postMessage() {
   randomfunfact = Math.floor(Math.random() * (funFacts.length - 0 + 1)) + 0;
   var randostring;
   var infrequentresponse;
+  var mock;
+
 
   if (infrequent % 10 == 0) {
     infrequentresponse = "Hey " + name + ", did you know " + funFacts[randomfunfact]
@@ -222,6 +224,8 @@ function postMessage() {
   else {
     randostring = name + " pls"
   }
+
+  mock = "Oh, you said " + text + "?? Haha idiot."
 
 
   botResponse = cool();
