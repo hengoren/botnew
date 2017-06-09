@@ -223,10 +223,10 @@ urlToCall = url + "?key=" + key + "&input=" + input
 
 
 /*API call*/
-var client = new HttpClient();
-client.get(urlToCall, function(response) {
-  ourcleverbotreply = response
-} );
+// var client = new HttpClient();
+// client.get(urlToCall, function(response) {
+//   ourcleverbotreply = response
+// } );
 
 
 
