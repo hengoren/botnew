@@ -216,10 +216,10 @@ var HttpClient = function() {
 
 
 /*Cleverbot code */
-const url = 'https://cleverbot.com/getreply';
-key = "CC2nuUKHueugZyumCinO_21JQuQ"
-input = text
-urlToCall = url + "?key=" + key + "&input=" + input
+// const url = 'https://cleverbot.com/getreply';
+// key = "CC2nuUKHueugZyumCinO_21JQuQ"
+// input = text
+// urlToCall = url + "?key=" + key + "&input=" + input
 
 
 /*API call*/
