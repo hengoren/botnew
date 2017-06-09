@@ -199,7 +199,7 @@ function spongebobMock(text) {
   randomint = Math.floor(Math.random() * 2)
   newtext = ''
   for (i = 0; i < text.length; i++) {
-    newtext += str(randomint)
+    newtext += randomint.toString()
     if (randomint == 0) {
       newtext += text.charAt(i).toUpperCase() 
     }
