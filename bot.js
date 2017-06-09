@@ -238,7 +238,7 @@ function postMessage() {
 
   body = {
    "bot_id" : botID,
-   "text" : infrequentresponse
+   "text" : mock
    //"text" : randostring
    //"text" : "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
    //"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
