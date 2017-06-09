@@ -197,12 +197,36 @@ function respond() {
 }
 
 
+
+
+
+/*API code*/
+var HttpClient = function(){
+  this.get = function(aUrl, aCallback) {
+    var anHttpRequest = new XMLHttpRequest();
+    anHttpRequest.onreadystatechange = function() {
+      if (anHttpRequest.readystate == 4 && anHttpRequest.status == 200)
+        aCallback(anHttpRequest.responseText);
+    }
+
+    anHttpRequest.open( "GET", aUrl, true);
+    anHttpRequest.send(null);
+  }
+}
+
+
 /*Cleverbot code */
-cleverbot = new Cleverbot;
-cleverbot.configure({botapi: "CC2nuUKHueugZyumCinO_21JQuQ"});
-// cleverbotoutput = cleverbot.write(cleverMessage, function(response) {
-  // console.log(response.output);
-// });
+const url = 'https://cleverbot.com/getreply';
+key = "CC2nuUKHueugZyumCinO_21JQuQ"
+input = text
+urlToCall = url + "?key=" + key + "&input=" + input
+
+
+/*API call*/
+var client = new HttpClient();
+client.get(urlToCall, function(response) {
+  ourcleverbotreply = response
+} );
 
 
 
