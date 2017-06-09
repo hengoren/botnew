@@ -201,18 +201,18 @@ function respond() {
 
 
 /*API code*/
-// var HttpClient = function() {
-//   this.get = function(aUrl, aCallback) {
-//     var anHttpRequest = new XMLHttpRequest();
-//     anHttpRequest.onreadystatechange = function() {
-//       if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
-//         aCallback(anHttpRequest.responseText);
-//     }
+var HttpClient = function() {
+  this.get = function(aUrl, aCallback) {
+    var anHttpRequest = new XMLHttpRequest();
+    anHttpRequest.onreadystatechange = function() {
+      if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+        aCallback(anHttpRequest.responseText);
+    }
 
-//     anHttpRequest.open("GET", aUrl, true);
-//     anHttpRequest.send(null);
-//   }
-// }
+    anHttpRequest.open("GET", aUrl, true);
+    anHttpRequest.send(null);
+  }
+}
 
 
 /*Cleverbot code */
@@ -223,15 +223,15 @@ urlToCall = url + "?key=" + key + "&input=" + input
 
 
 /*API call*/
-// var client = new HttpClient();
+var client = new HttpClient();
 // client.get("https://www.cleverbot.com/getreply?key=CC2nuUKHueugZyumCinO_21JQuQ&input=will it still be there later this evening", function(response) {
 //   return response.json
 // } );
 
 
-fetch(urlToCall).then(function(reponse) {
-  return response.json();
-});
+// fetch(urlToCall).then(function(reponse) {
+//   return response.json();
+// });
 
 
 
