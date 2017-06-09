@@ -18,6 +18,8 @@
 // Executable File  246 lines (210 sloc)  11.8 KB
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
+var Cleverbot = require('cleverbot-node');
+
 
 /* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
 var botID = process.env.BOT_ID;
@@ -194,6 +196,24 @@ function respond() {
   }
 }
 
+
+/*Cleverbot code */
+cleverbot = new Cleverbot;
+cleverbot.configure({botapi: "CC2nuUKHueugZyumCinO_21JQuQ"});
+cleverbotoutput = cleverbot.write(cleverMessage, function(response) {
+  console.log(response.output);
+});
+
+
+
+
+
+
+
+
+
+
+
 /* this function takes in text and mocks it like the recent spongebob meme*/
 function spongebobMock(text) {
   newtext = ''
@@ -208,6 +228,8 @@ function spongebobMock(text) {
   }
   return newtext
 }
+
+
 
 /* This function generates a message to be posted to by the bot */
 function postMessage() {
@@ -252,7 +274,7 @@ function postMessage() {
 
   body = {
    "bot_id" : botID,
-   "text" : mock
+   "text" : cleverbotoutput
    //"text" : randostring
    //"text" : "cmon " + name + ", boi yo look like a muhfuckin " + adjectives[randomadj] + " " + animals[randomanimal] +  ". Lookin at me like \n \n" + botResponse + "\n \n wit yo ugly " + bakes[randombake] + " face ass like shit boi"
    //"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
