@@ -196,10 +196,9 @@ function respond() {
 
 /* this function takes in text and mocks it like the recent spongebob meme*/
 function spongebobMock(text) {
-  randomint = Math.random() * 2
   newtext = ''
   for (i = 0; i < text.length; i++) {
-    newtext += randomint.toString()
+    randomint = Math.floor(Math.random() * 2)
     if (randomint == 0) {
       newtext += text.charAt(i).toUpperCase() 
     }
