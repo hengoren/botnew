@@ -194,6 +194,21 @@ function respond() {
   }
 }
 
+/* this function takes in text and mocks it like the recent spongebob meme*/
+function spongebobMock(text) {
+  randomint = Math.floor(Math.random() * 2)
+  newtext = ''
+  for (i = 0; i < text.length; i++) {
+    if (randomint == 0) {
+      newtext += text.charAt(i).toUpperCase() 
+    }
+    else {
+      newtext += text.charAt(i).toLowerCase()
+    }
+  }
+  return newtext
+
+}
 
 /* This function generates a message to be posted to by the bot */
 function postMessage() {
