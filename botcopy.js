@@ -86,7 +86,7 @@ var r;
 var userId;
 
 /* JSON keywords from messages */
-var attatchments;
+var attachments;
 var avatar_url;
 var created_at;
 var group_id;
@@ -114,7 +114,7 @@ function respond() {
 	userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
 
 	/* set variables for JSON */
-	attatchments = request.attatchments
+	attachments = request.attachments
 	name = request.name
 	avatar_url = request.avatar_url
 	created_at = request.created_at
@@ -180,7 +180,7 @@ function postMessage() {
 		"text" : msgToPost
 		//"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
              		//"\n sender_id: " + sender_id + "\n source_guid: " + source_guid + "\n system: " + system + "\n text: " + text + "\n user_id: " + user_id; 
-        "attatchments" : [
+        "attachments" : [
           {
         	"type" : "mentions"
         	"user_ids" : [1234567890],
