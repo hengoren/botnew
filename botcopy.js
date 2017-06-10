@@ -154,19 +154,18 @@ function postMessage() {
 	mock = spongebobMock(text);
 	funnyFace = cool();
 	
-	// if (infrequent % 10 == 0) {
-	// 	msgToPost = "Hey " + name + ", did you know " + funFacts[randomfunfact]
-	// }
-	// else if (infrequent % 10 == 1) {
-	// 	msgToPost = "cmon @" + name + ", boi you look like a " + adjectives[randomadj] + " " + animals[randomanimal]
-	// }
-	// else if (infrequent % 10 == 2) {
-	// 	msgToPost = funnyFace
-	// }
-	// else if (infrequent % 10 == 3) {
-	// 	msgToPost = mock
-	// }
-	msgToPost = "cmon @" + name + ", boi you look like a " + adjectives[randomadj] + " " + animals[randomanimal]
+	if (infrequent % 10 == 0) {
+		msgToPost = "Hey " + name + ", did you know " + funFacts[randomfunfact]
+	}
+	else if (infrequent % 10 == 1) {
+		msgToPost = "cmon @" + name + ", boi you look like a " + adjectives[randomadj] + " " + animals[randomanimal]
+	}
+	else if (infrequent % 10 == 2) {
+		msgToPost = funnyFace
+	}
+	else if (infrequent % 10 == 3) {
+		msgToPost = mock
+	}
 
 
 	options = {
@@ -180,15 +179,6 @@ function postMessage() {
 		"text" : msgToPost
 		//"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
              		//"\n sender_id: " + sender_id + "\n source_guid: " + source_guid + "\n system: " + system + "\n text: " + text + "\n user_id: " + user_id; 
-        "attachments" : [
-          {
-        	"type" : "mentions"
-        	"user_ids" : [1234567890],
-        	"loci" : [
-        	  [5, name.length + 1]
-        	]
-          }
-        ]
 	};
 
 	console.log('sending ' + msgToPost + ' to ' + botID)
