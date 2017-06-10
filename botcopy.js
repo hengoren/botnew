@@ -158,7 +158,7 @@ function postMessage() {
 		msgToPost = "Hey " + name + ", did you know " + funFacts[randomfunfact]
 	}
 	else if (infrequent % 10 == 1) {
-		msgToPost = "cmon @" + name + ", boi you look like a " + adjectives[randomadj] + " " + animals[randomanimal]
+		msgToPost = "cmon " + name + ", boi you look like a " + adjectives[randomadj] + " " + animals[randomanimal]
 	}
 	else if (infrequent % 10 == 2) {
 		msgToPost = funnyFace
