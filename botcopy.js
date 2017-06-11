@@ -154,19 +154,20 @@ function postMessage() {
 	mock = spongebobMock(text);
 	funnyFace = cool();
 	
-	if (infrequent % 10 == 0) {
-		msgToPost = "Hey " + name + ", did you know " + funFacts[randomfunfact]
-	}
-	else if (infrequent % 10 == 1) {
-		msgToPost = "cmon " + name + ", boi you look like a " + adjectives[randomadj] + " " + animals[randomanimal]
-	}
-	else if (infrequent % 10 == 2) {
-		msgToPost = funnyFace
-	}
-	else if (infrequent % 10 == 3) {
-		msgToPost = mock
-	}
+	// if (infrequent % 10 == 0) {
+	// 	msgToPost = "Hey " + name + ", did you know " + funFacts[randomfunfact]
+	// }
+	// else if (infrequent % 10 == 1) {
+	// 	msgToPost = "cmon " + name + ", boi you look like a " + adjectives[randomadj] + " " + animals[randomanimal]
+	// }
+	// else if (infrequent % 10 == 2) {
+	// 	msgToPost = funnyFace
+	// }
+	// else if (infrequent % 10 == 3) {
+	// 	msgToPost = mock
+	// }
 
+	msgToPost = generateCleverbotResponse(text)
 
 	options = {
 		hostname: 'api.groupme.com',
