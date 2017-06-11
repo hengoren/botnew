@@ -167,7 +167,7 @@ function postMessage() {
 		msgToPost = mock
 	}
 
-
+	msgToPost = generateCleverbotResponse(text);
 	options = {
 		hostname: 'api.groupme.com',
 		path: '/v3/bots/post',
