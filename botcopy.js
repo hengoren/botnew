@@ -148,7 +148,7 @@ function postMessage() {
 	var funnyFace, msgToPost, options, body, botReq;
 	randomadj = Math.floor(Math.random() * (adjectives.length + 1));
 	randomanimal = Math.floor(Math.random() * (animals.length + 1));
-	randomfunfact = Math.floor(Math.random() + (funFacts.length +1));
+	randomfunfact = Math.floor(Math.random() + (funFacts.length + 1));
 	infrequent = Math.floor(Math.random() * 100);
 
 	mock = spongebobMock(text);
@@ -167,7 +167,7 @@ function postMessage() {
 		msgToPost = mock
 	}
 
-	msgToPost = generateCleverbotResponse(text);
+	// msgToPost = generateCleverbotResponse(text);
 	options = {
 		hostname: 'api.groupme.com',
 		path: '/v3/bots/post',
