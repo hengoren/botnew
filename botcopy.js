@@ -206,7 +206,7 @@ function postMessage() {
 	};
 
 	console.log('sending ' + msgToPost + ' to ' + botID)
-
+	//trying to control flow
 	if (global_cleverbot_response == 'undefined') {
 		break;
 	}
