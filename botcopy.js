@@ -78,6 +78,7 @@ function generateCleverbotResponse(input_text) {
 	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
 	thepath = "?key=" + cb_key + "&input=" + input_text
 	url = host + thepath
+	console.log("HERE, made the url")
 
 	cbReq = request(url, function(error, response, body) {
 		console.log("requesting from the url: ", url)
