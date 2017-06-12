@@ -239,7 +239,7 @@ function postMessage() {
 
 /* using request package */
 function generateCleverbotResponse(input_text) {
-	var host, cb_key, thepath, url;
+	var host, cb_key, thepath, url, toreturn;
 	host = "https://www.cleverbot.com/getreply"
 	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
 	thepath = "?key" + cb_key + "&input=" + input_text
@@ -249,9 +249,10 @@ function generateCleverbotResponse(input_text) {
 		console.log("requesting from the url: ", url)
 		console.log('error:', error); // Prints the error if one occurred
 		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
+		toreturn = response
 		console.log('body:', body); //print the stuff
 	});
-	return response 
+	return toreturn 
 
 }
 
