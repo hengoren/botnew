@@ -71,24 +71,24 @@ function spongebobMock(text) {
 }
 
 /* using request package */
-function generateCleverbotResponse(input_text) {
-	var host, cb_key, thepath, url, toreturn;
-	host = "https://www.cleverbot.com/getreply"
-	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
-	thepath = "?key=" + cb_key + "&input=" + input_text
-	url = host + thepath
+// function generateCleverbotResponse(input_text) {
+// 	var host, cb_key, thepath, url, toreturn;
+// 	host = "https://www.cleverbot.com/getreply"
+// 	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
+// 	thepath = "?key=" + cb_key + "&input=" + input_text
+// 	url = host + thepath
 
-	cbReq = request(url, function(error, response, body) {
-		console.log("requesting from the url: ", url)
-		console.log('error:', error); // Prints the error if one occurred
-		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
-		console.log('body:', body); //print the stuff
-		toreturn = JSON.parse(body).output;
-		console.log("TORETURN!!!!! ", toreturn)
+// 	cbReq = request(url, function(error, response, body) {
+// 		console.log("requesting from the url: ", url)
+// 		console.log('error:', error); // Prints the error if one occurred
+// 		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
+// 		console.log('body:', body); //print the stuff
+// 		toreturn = JSON.parse(body).output;
+// 		console.log("TORETURN!!!!! ", toreturn)
 		
-	});
-	return toreturn 
-}
+// 	});
+// 	return toreturn 
+// }
 
 /* vars created to generate random integers within the bounds of each dictionary.
 This will index you to a random entry in the dictionary */
@@ -222,6 +222,7 @@ function postMessage() {
 			toreturn = JSON.parse(body).output;
 			console.log("TORETURN!!!!! ", toreturn)
 			global_cleverbot_response = toreturn
+		};
 		// generateCleverbotResponse(text)
 		console.log("we doing the while statement, the gcbv is ", global_cleverbot_response);
 
