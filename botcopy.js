@@ -189,7 +189,7 @@ function postMessage() {
 	// else if (infrequent % 10 == 3) {
 	// 	msgToPost = mock
 	// }
-	console.log("global :", global_cleverbot_response)
+	console.log("global :", global)
 	msgToPost = global_cleverbot_response;
 	console.log("Generated cb response: ", msgToPost)
 	options = {
@@ -206,6 +206,10 @@ function postMessage() {
 	};
 
 	console.log('sending ' + msgToPost + ' to ' + botID)
+
+	if (global_cleverbot_response == 'undefined') {
+		break;
+	}
 
 	botReq = HTTPS.request(options, function(res) {
 		if (res.statusCode = 202) {
