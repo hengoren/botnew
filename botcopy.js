@@ -71,24 +71,24 @@ function spongebobMock(text) {
 }
 
 /* using request package */
-// function generateCleverbotResponse(input_text) {
-// 	var host, cb_key, thepath, url, toreturn;
-// 	host = "https://www.cleverbot.com/getreply"
-// 	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
-// 	thepath = "?key=" + cb_key + "&input=" + input_text
-// 	url = host + thepath
+function generateCleverbotResponse(input_text) {
+	var host, cb_key, thepath, url, toreturn;
+	host = "https://www.cleverbot.com/getreply"
+	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
+	thepath = "?key=" + cb_key + "&input=" + input_text
+	url = host + thepath
 
-// 	cbReq = request(url, function(error, response, body) {
-// 		console.log("requesting from the url: ", url)
-// 		console.log('error:', error); // Prints the error if one occurred
-// 		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
-// 		console.log('body:', body); //print the stuff
-// 		toreturn = JSON.parse(body).output;
-// 		console.log("TORETURN!!!!! ", toreturn)
+	cbReq = request(url, function(error, response, body) {
+		console.log("requesting from the url: ", url)
+		console.log('error:', error); // Prints the error if one occurred
+		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
+		console.log('body:', body); //print the stuff
+		toreturn = JSON.parse(body).output;
+		console.log("TORETURN!!!!! ", toreturn)
 		
-// 	});
-// 	return toreturn 
-// }
+	});
+	return toreturn 
+}
 
 /* vars created to generate random integers within the bounds of each dictionary.
 This will index you to a random entry in the dictionary */
@@ -153,12 +153,12 @@ function respond() {
 		if (request.text && botRegex.test(request.text)) {
 			toSend = request.text;
 			this.res.writeHead(200);
-			postMessage()
+			postMessage(generateCleverbotResponse)
 			this.res.end();
 		}
 	}
 	else {
-		console.log("don't care, not gonna respond")
+		console.log("don't care, not gonna")
 		this.res.writeHead(200);
 		this.res.end();
 	}
@@ -166,7 +166,7 @@ function respond() {
 
 
 /* This function generates the message to be posted from the bot and posts it */
-function postMessage() {
+function postMessage(callback) {
 	var funnyFace, msgToPost, options, body, botReq;
 	randomadj = Math.floor(Math.random() * (adjectives.length + 1));
 	randomanimal = Math.floor(Math.random() * (animals.length + 1));
@@ -188,8 +188,8 @@ function postMessage() {
 	// else if (infrequent % 10 == 3) {
 	// 	msgToPost = mock
 	// }
-	console.log("global :", global_cleverbot_response)
-	msgToPost = global_cleverbot_response;
+
+	msgToPost = callback(text);
 	console.log("Generated cb response: ", msgToPost)
 	options = {
 		hostname: 'api.groupme.com',
@@ -203,29 +203,8 @@ function postMessage() {
 		//"text" : r //+ "\n attatchments: " + attatchments + "\n avatar_url: " + avatar_url + "\n created_at: " + created_at + "\n group_id: " + group_id + "\n id: " + id + 
              		//"\n sender_id: " + sender_id + "\n source_guid: " + source_guid + "\n system: " + system + "\n text: " + text + "\n user_id: " + user_id; 
 	};
-	
+
 	console.log('sending ' + msgToPost + ' to ' + botID)
-	//trying to control flow
-	if (global_cleverbot_response == undefined) {
-		var host, cb_key, thepath, url, toreturn;
-		host = "https://www.cleverbot.com/getreply"
-		cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
-		thepath = "?key=" + cb_key + "&input=" + text
-		url = host + thepath
-
-		cbReq = request(url, function(error, response, body) {
-			console.log("requesting from the url: ", url)
-			console.log('error:', error); // Prints the error if one occurred
-			console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
-			console.log('body:', body); //print the stuff
-			toreturn = JSON.parse(body).output;
-			console.log("TORETURN!!!!! ", toreturn)
-			global_cleverbot_response = toreturn
-		});
-		// generateCleverbotResponse(text)
-		console.log("we doing the while statement, the gcbv is ", global_cleverbot_response);
-
-	}
 
 	botReq = HTTPS.request(options, function(res) {
 		if (res.statusCode = 202) {
