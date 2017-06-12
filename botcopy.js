@@ -189,7 +189,7 @@ function postMessage() {
 	// else if (infrequent % 10 == 3) {
 	// 	msgToPost = mock
 	// }
-
+	console.log("global :", global_cleverbot_response)
 	msgToPost = global_cleverbot_response;
 	console.log("Generated cb response: ", msgToPost)
 	options = {
