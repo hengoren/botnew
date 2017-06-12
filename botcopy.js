@@ -83,8 +83,9 @@ function generateCleverbotResponse(input_text) {
 		console.log('error:', error); // Prints the error if one occurred
 		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
 		console.log('body:', body); //print the stuff
-		b = JSON.stringify(body)
+		var b = JSON.stringify(body)
 		toreturn = b.output
+		console.log("the b ", b)
 		console.log("TORETURN!!!!! ", toreturn)
 		
 	});
