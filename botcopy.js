@@ -70,6 +70,26 @@ function spongebobMock(text) {
 	return newtext
 }
 
+/* using request package */
+function generateCleverbotResponse(input_text) {
+	var host, cb_key, thepath, url, toreturn;
+	host = "https://www.cleverbot.com/getreply"
+	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
+	thepath = "?key=" + cb_key + "&input=" + input_text
+	url = host + thepath
+
+	cbReq = request(url, function(error, response, body) {
+		console.log("requesting from the url: ", url)
+		console.log('error:', error); // Prints the error if one occurred
+		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
+		console.log('body:', body); //print the stuff
+		toreturn = body
+		console.log("TORETURN!!!!! ", toreturn)
+		
+	});
+	return toreturn 
+
+
 /* vars created to generate random integers within the bounds of each dictionary.
 This will index you to a random entry in the dictionary */
 var randomadj;
@@ -238,24 +258,6 @@ function postMessage() {
 // 	return responseString
 // }
 
-/* using request package */
-function generateCleverbotResponse(input_text) {
-	var host, cb_key, thepath, url, toreturn;
-	host = "https://www.cleverbot.com/getreply"
-	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
-	thepath = "?key=" + cb_key + "&input=" + input_text
-	url = host + thepath
-
-	cbReq = request(url, function(error, response, body) {
-		console.log("requesting from the url: ", url)
-		console.log('error:', error); // Prints the error if one occurred
-		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
-		console.log('body:', body); //print the stuff
-		toreturn = body
-		console.log("TORETURN!!!!! ", toreturn)
-		
-	});
-	return toreturn 
 
 }
 
