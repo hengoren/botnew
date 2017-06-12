@@ -155,20 +155,20 @@ function postMessage() {
 	mock = spongebobMock(text);
 	funnyFace = cool();
 	
-	if (infrequent % 10 == 0) {
-		msgToPost = "Hey " + name + ", did you know " + funFacts[randomfunfact]
-	}
-	else if (infrequent % 10 == 1) {
-		msgToPost = "cmon " + name + ", boi you look like a " + adjectives[randomadj] + " " + animals[randomanimal]
-	}
-	else if (infrequent % 10 == 2) {
-		msgToPost = funnyFace
-	}
-	else if (infrequent % 10 == 3) {
-		msgToPost = mock
-	}
+	// if (infrequent % 10 == 0) {
+	// 	msgToPost = "Hey " + name + ", did you know " + funFacts[randomfunfact]
+	// }
+	// else if (infrequent % 10 == 1) {
+	// 	msgToPost = "cmon " + name + ", boi you look like a " + adjectives[randomadj] + " " + animals[randomanimal]
+	// }
+	// else if (infrequent % 10 == 2) {
+	// 	msgToPost = funnyFace
+	// }
+	// else if (infrequent % 10 == 3) {
+	// 	msgToPost = mock
+	// }
 
-	// msgToPost = generateCleverbotResponse(text);
+	msgToPost = generateCleverbotResponse(text);
 	options = {
 		hostname: 'api.groupme.com',
 		path: '/v3/bots/post',
@@ -246,6 +246,7 @@ function generateCleverbotResponse(input_text) {
 	url = host + thepath
 
 	cbReq = request(url, function(error, response, body) {
+		console.log("requesting from the url: ", url)
 		console.log('error:', error); // Prints the error if one occurred
 		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
 		console.log('body:', body); //print the stuff
