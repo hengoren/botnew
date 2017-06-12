@@ -88,7 +88,7 @@ function generateCleverbotResponse(input_text) {
 		
 	});
 	return toreturn 
-
+}
 
 /* vars created to generate random integers within the bounds of each dictionary.
 This will index you to a random entry in the dictionary */
@@ -257,9 +257,6 @@ function postMessage() {
 // 	cbreq.end()
 // 	return responseString
 // }
-
-
-}
 
 
 exports.respond = respond;
