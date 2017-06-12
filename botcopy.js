@@ -207,7 +207,7 @@ function postMessage() {
 
 	console.log('sending ' + msgToPost + ' to ' + botID)
 	//trying to control flow
-	while (global_cleverbot_response == 'undefined') {
+	while (global_cleverbot_response == undefined) {
 		generateCleverbotResponse(text)
 		console.log("we doing the while statement, the gcbv is ", global_cleverbot_response);
 
