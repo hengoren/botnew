@@ -153,7 +153,6 @@ function respond() {
 		if (request.text && botRegex.test(request.text)) {
 			toSend = request.text;
 			this.res.writeHead(200);
-			global_cleverbot_response = generateCleverbotResponse(text);
 			postMessage()
 			this.res.end();
 		}
