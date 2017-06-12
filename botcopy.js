@@ -3,6 +3,7 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var CB = require('cleverbot-node');
+var request = require('request');
 
 /* sets botID. You wil need to change your .env file so that you have this working correctly.
 Or you may hardcode your botID here. */
@@ -203,39 +204,55 @@ function postMessage() {
 	botReq.end(JSON.stringify(body));
 }
 
+/* uses https package */
+// function generateCleverbotResponse(input_text) {
+// 	var cb_key, thepath;
+// 	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
+// 	thepath = "?key" + cb_key + "&input=" + input_text
 
+// 	options = {
+// 		hostname: "https://www.cleverbot.com/getreply",
+// 		path: thepath,
+// 		method: 'GET',
+// 		headers: { 'Content-Type': 'text/javascript' }
+// 	};
+
+// 	cbReq = HTTPS.request(options, function(res) {
+// 		res.setEncoding('utf-8');
+
+// 		var responseString = '';
+
+// 		res.on('data', function(data) {
+// 			responseString += data;
+// 		});
+
+// 		res.on('end', function() {
+// 			console.log(responseString);
+// 			var responseObject = JSON.parse(responseString);
+// 			success(responseObject);
+// 		});
+// 	});
+
+// 	cbreq.end()
+// 	return responseString
+// }
+
+/* using request package */
 function generateCleverbotResponse(input_text) {
-	var cb_key, thepath;
+	var host, cb_key, thepath, url;
+	host = "https://www.cleverbot.com/getreply"
 	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
 	thepath = "?key" + cb_key + "&input=" + input_text
+	url = host + thepath
 
-	options = {
-		hostname: "https://www.cleverbot.com/getreply",
-		path: thepath,
-		method: 'GET',
-		headers: { 'Content-Type': 'text/javascript' }
-	};
-
-	cbReq = HTTPS.request(options, function(res) {
-		res.setEncoding('utf-8');
-
-		var responseString = '';
-
-		res.on('data', function(data) {
-			responseString += data;
-		});
-
-		res.on('end', function() {
-			console.log(responseString);
-			var responseObject = JSON.parse(responseString);
-			success(responseObject);
-		});
+	cbReq = request(url, function(error, response, body) {
+		console.log('error:', error); // Prints the error if one occurred
+		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
+		console.log('body:', body); //print the stuff
 	});
+	return body 
 
-	cbreq.end()
-	return responseString
 }
-
 
 
 exports.respond = respond;

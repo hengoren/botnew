@@ -10,7 +10,8 @@
     "cleverbot-node": "^0.3.10",
     "cleverbot.io": "^1.0.4",
     "cool-ascii-faces": "~1.3.x",
-    "director": ""
+    "director": "",
+    "request": "^2.81.0"
   },
   "engines": {
     "node": "0.10.x"
