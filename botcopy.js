@@ -210,7 +210,7 @@ function postMessage() {
 		var host, cb_key, thepath, url, toreturn;
 		host = "https://www.cleverbot.com/getreply"
 		cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
-		thepath = "?key=" + cb_key + "&input=" + input_text
+		thepath = "?key=" + cb_key + "&input=" + text
 		url = host + thepath
 
 		cbReq = request(url, function(error, response, body) {
