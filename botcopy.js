@@ -119,6 +119,7 @@ var source_guid;
 var system;
 var text;
 var user_id;
+var global_cleverbot_response;
 
 /* Not sure if used */
 var chunk;
@@ -152,12 +153,13 @@ function respond() {
 		if (request.text && botRegex.test(request.text)) {
 			toSend = request.text;
 			this.res.writeHead(200);
+			global_cleverbot_response = generateCleverbotResponse(text);
 			postMessage()
 			this.res.end();
 		}
 	}
 	else {
-		console.log("don't care")
+		console.log("don't care, not gonna respond")
 		this.res.writeHead(200);
 		this.res.end();
 	}
@@ -188,7 +190,7 @@ function postMessage() {
 	// 	msgToPost = mock
 	// }
 
-	msgToPost = generateCleverbotResponse(text);
+	msgToPost = global_cleverbot_response;
 	console.log("Generated cb response: ", msgToPost)
 	options = {
 		hostname: 'api.groupme.com',
