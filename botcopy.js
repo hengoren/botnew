@@ -222,7 +222,7 @@ function postMessage() {
 			toreturn = JSON.parse(body).output;
 			console.log("TORETURN!!!!! ", toreturn)
 			global_cleverbot_response = toreturn
-		};
+		});
 		// generateCleverbotResponse(text)
 		console.log("we doing the while statement, the gcbv is ", global_cleverbot_response);
 
