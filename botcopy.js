@@ -250,7 +250,7 @@ function generateCleverbotResponse(input_text) {
 		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
 		console.log('body:', body); //print the stuff
 	});
-	return body 
+	return response 
 
 }
 
