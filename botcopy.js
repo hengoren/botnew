@@ -171,7 +171,7 @@ function respond() {
 /* This function generates the message to be posted from the bot and posts it */
 function postMessage(callback) {
 	var a_clever_response = callback(text);
-	console.log("THIRD, we shouldhave just called generateCleverbotResponse and gotten a response, " a_clever_response)
+	console.log("THIRD, we shouldhave just called generateCleverbotResponse and gotten a response, ", a_clever_response);
 	var funnyFace, msgToPost, options, body, botReq;
 	randomadj = Math.floor(Math.random() * (adjectives.length + 1));
 	randomanimal = Math.floor(Math.random() * (animals.length + 1));
