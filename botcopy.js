@@ -209,6 +209,8 @@ function postMessage() {
 	//trying to control flow
 	while (global_cleverbot_response == 'undefined') {
 		generateCleverbotResponse(text)
+		console.log("we doing the while statement, the gcbv is ", global_cleverbot_response);
+
 	}
 
 	botReq = HTTPS.request(options, function(res) {
