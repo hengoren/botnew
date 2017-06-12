@@ -169,6 +169,7 @@ function postMessage() {
 	// }
 
 	msgToPost = generateCleverbotResponse(text);
+	console.log("Generated cb response: ", msgToPost)
 	options = {
 		hostname: 'api.groupme.com',
 		path: '/v3/bots/post',
