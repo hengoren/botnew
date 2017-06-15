@@ -4,6 +4,8 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var CB = require('cleverbot-node');
 var request = require('request');
+var async = require('async');
+
 
 /* sets botID. You wil need to change your .env file so that you have this working correctly.
 Or you may hardcode your botID here. */
@@ -71,7 +73,7 @@ function spongebobMock(text) {
 }
 
 /* using request package */
-function generateCleverbotResponse(input_text, callback) {
+function generateCleverbotResponse(input_text) {
 	var host, cb_key, thepath, url, toreturn;
 	host = "https://www.cleverbot.com/getreply"
 	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
@@ -89,7 +91,7 @@ function generateCleverbotResponse(input_text, callback) {
 		
 	});
 	console.log("Here we call the callback in gcr")
-	callback()
+	global_cleverbot_response = toreturn
 	return toreturn 
 }
 
@@ -158,7 +160,9 @@ function respond() {
 			toSend = request.text;
 			this.res.writeHead(200);
 			console.log("right before the postMessage call")
-			global_cleverbot_response = generateCleverbotResponse(text, postMessage)
+			async.series([
+				generateCleverbotResponse(text),
+				postMessage()]);
 			this.res.end();
 		}
 	}
