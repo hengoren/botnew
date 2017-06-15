@@ -4,7 +4,6 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var CB = require('cleverbot-node');
 var request = require('request');
-var async = require('async');
 
 
 /* sets botID. You wil need to change your .env file so that you have this working correctly.
