@@ -71,8 +71,7 @@ function spongebobMock(text) {
 }
 
 /* using request package */
-function generateCleverbotResponse(input_text) {
-	console.log("SECOND, this should happen next, we are inside the postMessage func calling generateCleverbotResponse")
+function generateCleverbotResponse(input_text, callback) {
 	var host, cb_key, thepath, url, toreturn;
 	host = "https://www.cleverbot.com/getreply"
 	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
@@ -89,6 +88,8 @@ function generateCleverbotResponse(input_text) {
 		console.log("TORETURN!!!!! ", toreturn)
 		
 	});
+
+	callback()
 	return toreturn 
 }
 
@@ -157,7 +158,7 @@ function respond() {
 			toSend = request.text;
 			this.res.writeHead(200);
 			console.log("right before the postMessage call")
-			postMessage(generateCleverbotResponse)
+			global_cleverbot_response = generateCleverbotResponse(text, postMessage)
 			this.res.end();
 		}
 	}
@@ -170,9 +171,8 @@ function respond() {
 
 
 /* This function generates the message to be posted from the bot and posts it */
-function postMessage(callback) {
-	var a_clever_response = callback(text);
-	console.log("THIRD, we shouldhave just called generateCleverbotResponse and gotten a response, ", a_clever_response);
+function postMessage() {;
+	// console.log("THIRD, we shouldhave just called generateCleverbotResponse and gotten a response, ", a_clever_response);
 	var funnyFace, msgToPost, options, body, botReq;
 	randomadj = Math.floor(Math.random() * (adjectives.length + 1));
 	randomanimal = Math.floor(Math.random() * (animals.length + 1));
