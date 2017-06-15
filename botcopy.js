@@ -160,9 +160,7 @@ function respond() {
 			toSend = request.text;
 			this.res.writeHead(200);
 			console.log("right before the postMessage call")
-			async.series([
-				generateCleverbotResponse(text),
-				postMessage()]);
+			postMessage()
 			this.res.end();
 		}
 	}
