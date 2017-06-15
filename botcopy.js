@@ -88,7 +88,7 @@ function generateCleverbotResponse(input_text, callback) {
 		console.log("TORETURN!!!!! ", toreturn)
 		
 	});
-
+	console.log("Here we call the callback in gcr")
 	callback()
 	return toreturn 
 }
