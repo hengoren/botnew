@@ -195,7 +195,7 @@ function postMessage() {;
 	// 	msgToPost = mock
 	// }
 
-	msgToPost = a_clever_response
+	msgToPost = global_cleverbot_response
 	console.log("Generated cb response: ", msgToPost)
 	options = {
 		hostname: 'api.groupme.com',
