@@ -125,6 +125,7 @@ function generateCleverbotResponse(input_text) {
 		
 	});
 	global_cleverbot_response = toreturn
+	postMessage()
 	return toreturn 
 }
 
