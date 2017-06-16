@@ -90,6 +90,8 @@ var global_cleverbot_response;
 /* Not sure if used */
 var chunk;
 
+var requestCount = 0;
+
 
 /* This function takes in text and mocks it like the recent Spongebob meme */
 function spongebobMock(text) {
@@ -122,10 +124,14 @@ function generateCleverbotResponse(input_text, postMessage) {
 		console.log('body:', body); //print the stuff
 		toreturn = JSON.parse(body).output;
 		console.log("TORETURN!!!!! ", toreturn)
+		requestCount = 1;
+
 		
 	});
 	global_cleverbot_response = toreturn
-	postMessage()
+	if (requestCount == 1) {
+		postMessage()
+	}
 	return toreturn 
 }
 
