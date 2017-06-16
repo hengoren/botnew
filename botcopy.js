@@ -56,44 +56,6 @@ var funFacts = ["11% of people are left handed", "August has the highest percent
 "sponges can hold more cold water than hot", "cats have over 100 vocal chords", "fire usually moves faster uphill than downhill", 
 "frogs can't swallow with their eyes open", "elephants are the only mammal that can't jump"]
 
-/* This function takes in text and mocks it like the recent Spongebob meme */
-function spongebobMock(text) {
-	newtext = ''
-	for (i = 0; i < text.length; i++) {
-		randomint = Math.floor(Math.random() * 2)
-		if (randomint == 0) {
-			newtext += text.charAt(i).toUpperCase()
-		}
-		else {
-			newtext += text.charAt(i).toLowerCase()
-		}
-	}
-	return newtext
-}
-
-/* using request package */
-function generateCleverbotResponse(input_text) {
-	var host, cb_key, thepath, url, toreturn;
-	host = "https://www.cleverbot.com/getreply"
-	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
-	thepath = "?key=" + cb_key + "&input=" + input_text
-	url = host + thepath
-	console.log("HERE, made the url")
-
-	cbReq = request(url, function(error, response, body) {
-		console.log("requesting from the url: ", url)
-		console.log('error:', error); // Prints the error if one occurred
-		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
-		console.log('body:', body); //print the stuff
-		toreturn = JSON.parse(body).output;
-		console.log("TORETURN!!!!! ", toreturn)
-		
-	});
-	console.log("Here we call the callback in gcr")
-	global_cleverbot_response = toreturn
-	return toreturn 
-}
-
 /* vars created to generate random integers within the bounds of each dictionary.
 This will index you to a random entry in the dictionary */
 var randomadj;
@@ -128,6 +90,44 @@ var global_cleverbot_response;
 /* Not sure if used */
 var chunk;
 
+
+/* This function takes in text and mocks it like the recent Spongebob meme */
+function spongebobMock(text) {
+	newtext = ''
+	for (i = 0; i < text.length; i++) {
+		randomint = Math.floor(Math.random() * 2)
+		if (randomint == 0) {
+			newtext += text.charAt(i).toUpperCase()
+		}
+		else {
+			newtext += text.charAt(i).toLowerCase()
+		}
+	}
+	return newtext
+}
+
+/* using request package */
+function generateCleverbotResponse(input_text) {
+	var host, cb_key, thepath, url, toreturn;
+	host = "https://www.cleverbot.com/getreply"
+	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
+	thepath = "?key=" + cb_key + "&input=" + input_text
+	url = host + thepath
+	console.log("HERE, made the url")
+
+	cbReq = request(url, function(error, response, body) {
+		console.log("requesting from the url: ", url)
+		console.log('error:', error); // Prints the error if one occurred
+		console.log('statusCode:', response && response.statusCode); // Print the response status code if response is returned
+		console.log('body:', body); //print the stuff
+		toreturn = JSON.parse(body).output;
+		console.log("TORETURN!!!!! ", toreturn)
+		
+	});
+	global_cleverbot_response = toreturn
+	return toreturn 
+}
+
 /* This function determines if the bot will respond to a certain message
 by triggering the bot on a regular expression */
 function respond() {
@@ -159,7 +159,7 @@ function respond() {
 			toSend = request.text;
 			this.res.writeHead(200);
 			console.log("right before the postMessage call")
-			postMessage()
+			generateCleverbotResponse(text)
 			this.res.end();
 		}
 	}
