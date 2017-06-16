@@ -130,6 +130,7 @@ function generateCleverbotResponse(input_text, postMessage) {
 	});
 	global_cleverbot_response = toreturn
 	if (requestCount == 1) {
+		console.log("HERE!")
 		postMessage()
 	}
 	return toreturn 
