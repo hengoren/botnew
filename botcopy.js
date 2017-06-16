@@ -107,7 +107,7 @@ function spongebobMock(text) {
 }
 
 /* using request package */
-function generateCleverbotResponse(input_text) {
+function generateCleverbotResponse(input_text, postMessage) {
 	var host, cb_key, thepath, url, toreturn;
 	host = "https://www.cleverbot.com/getreply"
 	cb_key = "CC2nuUKHueugZyumCinO_21JQuQ"
@@ -125,7 +125,6 @@ function generateCleverbotResponse(input_text) {
 		
 	});
 	global_cleverbot_response = toreturn
-	postMessage()
 	return toreturn 
 }
 
@@ -160,8 +159,7 @@ function respond() {
 			toSend = request.text;
 			this.res.writeHead(200);
 			console.log("right before the postMessage call")
-			generateCleverbotResponse(text)
-			this.res.end();
+			generateCleverbotResponse(text, postMessage)
 		}
 	}
 	else {
